@@ -1,0 +1,61 @@
+jr@MacBook-Air ~ % ls
+Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		echo
+jr@MacBook-Air ~ % git config --global user.name "j-demos23"
+jr@MacBook-Air ~ % git config --global user.email "julsdemos@berkeley.edu"
+jr@MacBook-Air ~ % git config -l
+credential.helper=osxkeychain
+init.defaultbranch=main
+user.name=j-demos23
+user.email=julsdemos@berkeley.edu
+jr@MacBook-Air ~ % ls       
+Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		echo
+jr@MacBook-Air ~ % cd Desktop
+jr@MacBook-Air Desktop % ls
+anaconda3
+jr@MacBook-Air Desktop % config -1
+zsh: command not found: config
+jr@MacBook-Air Desktop % config -l
+zsh: command not found: config
+jr@MacBook-Air Desktop % git config -l
+credential.helper=osxkeychain
+init.defaultbranch=main
+user.name=j-demos23
+user.email=julsdemos@berkeley.edu
+jr@MacBook-Air Desktop % git clone https://github.com/j-demos23/Computational-Social-Science-Projects..git
+Cloning into 'Computational-Social-Science-Projects.'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+jr@MacBook-Air Desktop % ls
+Computational-Social-Science-Projects.	anaconda3
+jr@MacBook-Air Desktop % cd Computational-Social-Science-Projects.
+jr@MacBook-Air Computational-Social-Science-Projects. % git pull
+Already up to date.
+jr@MacBook-Air Computational-Social-Science-Projects. % git config --global credential.helper cache
+jr@MacBook-Air Computational-Social-Science-Projects. % git pull
+Already up to date.
+jr@MacBook-Air Computational-Social-Science-Projects. % git config --global credential.helper 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
+jr@MacBook-Air Computational-Social-Science-Projects. % git pull
+Already up to date.
+jr@MacBook-Air Computational-Social-Science-Projects. % ls
+README.md
+jr@MacBook-Air Computational-Social-Science-Projects. % mkdir "Project 1"
+jr@MacBook-Air Computational-Social-Science-Projects. % ls
+Project 1	README.md
+jr@MacBook-Air Computational-Social-Science-Projects. % cd Project 1
+cd: no such file or directory: /Users/jr/Desktop/Computational-Social-Science-1s.
+jr@MacBook-Air Computational-Social-Science-Projects. % ls
+Project 1	README.md
+jr@MacBook-Air Computational-Social-Science-Projects. % cd "Project 1"
+jr@MacBook-Air Project 1 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+jr@MacBook-Air Project 1 % git init
+Initialized empty Git repository in /Users/jr/Desktop/Computational-Social-Science-Projects./Project 1/.git/
+jr@MacBook-Air Project 1 % vim p1_text_file.txt
+jr@MacBook-Air Project 1 % git add p1_text_file.txt
+jr@MacBook-Air Project 1 % git comit -m "Add p1_text_file.txt"
+jr@MacBook-Air Project 1 % git push
